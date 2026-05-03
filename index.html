@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fx_calendar_public — EA Calendar Artifacts</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #24292f; }
+    h1 { border-bottom: 1px solid #d0d7de; padding-bottom: .5rem; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { border: 1px solid #d0d7de; padding: .5rem .75rem; text-align: left; }
+    th { background: #f6f8fa; }
+    code { background: #f6f8fa; padding: .15rem .3rem; border-radius: 3px; font-size: .9em; }
+    pre { background: #f6f8fa; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+    a { color: #0969da; }
+  </style>
+</head>
+<body>
+  <h1>fx_calendar_public</h1>
+  <p>Public mirror of EA-consumable calendar artifacts. Updated daily at ~23:15 UTC.</p>
+
+  <h2>Artifacts</h2>
+  <table>
+    <thead>
+      <tr><th>File</th><th>Description</th><th>Format</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="calendar/events.parquet">calendar/events.parquet</a></td>
+        <td>Merged economic calendar (FF primary + MQL5 secondary), historic + 60-day forward</td>
+        <td>Apache Parquet</td>
+      </tr>
+      <tr>
+        <td><a href="calendar/holidays.parquet">calendar/holidays.parquet</a></td>
+        <td>Consolidated Tier 1 + Tier 2 bank holidays</td>
+        <td>Apache Parquet</td>
+      </tr>
+      <tr>
+        <td><a href="calendar/metadata.json">calendar/metadata.json</a></td>
+        <td>Pipeline metadata: row counts, coverage range, generated_at_utc</td>
+        <td>JSON</td>
+      </tr>
+      <tr>
+        <td><a href="features/seasonality_daily.parquet">features/seasonality_daily.parquet</a></td>
+        <td>Deterministic daily seasonality features</td>
+        <td>Apache Parquet</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Schema</h2>
+  <p>See <a href="schema.json">schema.json</a> for field-level schema of each artifact.</p>
+
+  <h2>Consumption examples</h2>
+
+  <h3>curl (no auth required)</h3>
+  <pre><code>curl -L -o events.parquet \
+  https://antonvedernikov-ctrl.github.io/fx_calendar_public/calendar/events.parquet</code></pre>
+
+  <h3>Python</h3>
+  <pre><code>import io, requests, pandas as pd
+
+url = "https://antonvedernikov-ctrl.github.io/fx_calendar_public/calendar/events.parquet"
+r = requests.get(url, timeout=30)
+r.raise_for_status()
+df = pd.read_parquet(io.BytesIO(r.content))
+print(df[df.is_future].head())</code></pre>
+
+  <h3>MQL5 WebRequest</h3>
+  <pre><code>// Tools &rarr; Options &rarr; Expert Advisors &rarr; Allow WebRequest for:
+//   https://antonvedernikov-ctrl.github.io
+string url = "https://antonvedernikov-ctrl.github.io/fx_calendar_public/calendar/metadata.json";
+char   post[], result[];
+string headers;
+int    timeout = 5000;
+int    code = WebRequest("GET", url, "", timeout, post, result, headers);
+if (code == 200) {
+   string body = CharArrayToString(result, 0, WHOLE_ARRAY, CP_UTF8);
+   Print("metadata: ", body);
+}</code></pre>
+
+  <h2>Staleness check</h2>
+  <pre><code>curl -sf https://antonvedernikov-ctrl.github.io/fx_calendar_public/calendar/metadata.json \
+  | jq '.generated_at_utc'</code></pre>
+  <p>If <code>generated_at_utc</code> is older than 36 hours, the data may be stale.</p>
+</body>
+</html>

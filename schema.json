@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "description": "Schema reference for EA-consumable calendar artifacts published via GitHub Pages.",
+  "base_url": "https://antonvedernikov-ctrl.github.io/fx_calendar_public",
+  "refresh_cadence": "daily ~23:15 UTC",
+  "artifacts": [
+    {
+      "path": "calendar/events.parquet",
+      "description": "Merged economic calendar: ForexFactory (primary) + MQL5 (secondary). Includes historic releases and 60-day forward horizon.",
+      "format": "Apache Parquet",
+      "key_columns": [
+        "ts_utc",
+        "country",
+        "currency",
+        "event_name",
+        "importance",
+        "actual",
+        "forecast",
+        "previous",
+        "source",
+        "all_sources",
+        "is_future",
+        "time_to_event_h",
+        "is_cb_rate_decision",
+        "tier"
+      ]
+    },
+    {
+      "path": "calendar/holidays.parquet",
+      "description": "Consolidated Tier 1 + Tier 2 bank holidays (FF + MQL5 + python-holidays + manual overrides).",
+      "format": "Apache Parquet",
+      "key_columns": [
+        "date",
+        "country",
+        "holiday_name",
+        "tier",
+        "market_closed",
+        "source"
+      ]
+    },
+    {
+      "path": "calendar/metadata.json",
+      "description": "Pipeline roll-up metadata: row counts, coverage range, generated_at_utc for staleness checks.",
+      "format": "JSON",
+      "key_fields": [
+        "schema_version",
+        "generated_at_utc",
+        "sources",
+        "merge",
+        "events",
+        "holidays",
+        "seasonality"
+      ]
+    },
+    {
+      "path": "features/seasonality_daily.parquet",
+      "description": "Deterministic time-based daily seasonality features.",
+      "format": "Apache Parquet",
+      "key_columns": [
+        "date",
+        "day_of_week",
+        "month",
+        "is_month_end",
+        "is_quarter_end",
+        "is_year_end",
+        "is_nfp_week"
+      ]
+    }
+  ]
+}
