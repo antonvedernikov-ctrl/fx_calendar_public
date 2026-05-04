@@ -1,11 +1,11 @@
 {
   "schema_version": "2",
-  "generated_at_utc": "2026-05-03T17:08:30.808702+00:00",
+  "generated_at_utc": "2026-05-04T08:12:14.096109+00:00",
   "sources": {
     "forexfactory": {
       "role": "primary",
       "raw_weeks": 184,
-      "events_rows": 16223,
+      "events_rows": 16222,
       "holidays_rows": 443,
       "coverage_min_utc": "2022-12-26 08:00:00+00:00",
       "coverage_max_utc": "2026-07-03 12:00:00+00:00"
@@ -13,52 +13,52 @@
     "mql5": {
       "role": "secondary",
       "raw_weeks": 112,
-      "events_rows": 30157,
-      "holidays_rows": 494,
+      "events_rows": 30205,
+      "holidays_rows": 495,
       "coverage_min_utc": "2022-12-31 00:00:00+00:00",
-      "coverage_max_utc": "2026-07-03 12:00:00+00:00"
+      "coverage_max_utc": "2026-07-04 00:00:00+00:00"
     }
   },
   "merge": {
-    "mql5_merged_into_ff": 5381,
-    "mql5_unique_kept": 24776,
-    "final_rows": 40999,
+    "mql5_merged_into_ff": 5392,
+    "mql5_unique_kept": 24813,
+    "final_rows": 41035,
     "source_mix": {
-      "mql5": 24776,
-      "forexfactory": 16223
+      "mql5": 24813,
+      "forexfactory": 16222
     }
   },
   "events": {
-    "rows": 40999,
+    "rows": 41035,
     "coverage_min_utc": "2022-12-26 23:30:00+00:00",
     "coverage_max_utc": "2026-07-03 12:00:00+00:00",
     "impact_counts": {
-      "low": 27086,
-      "medium": 9653,
-      "high": 4260
+      "low": 27099,
+      "medium": 9677,
+      "high": 4259
     },
     "tier_counts": {
-      "1": 29286,
-      "2": 6189,
-      "3": 5524
+      "1": 29330,
+      "2": 6186,
+      "3": 5519
     },
     "country_counts_top20": {
-      "US": 11310,
-      "GB": 3536,
-      "EU": 3443,
-      "JP": 3151,
-      "DE": 2335,
-      "AU": 1870,
+      "US": 11312,
+      "GB": 3560,
+      "EU": 3450,
+      "JP": 3153,
+      "DE": 2339,
+      "AU": 1871,
       "CA": 1744,
-      "FR": 1627,
+      "FR": 1629,
       "NZ": 1313,
-      "IT": 1240,
-      "BR": 1193,
-      "CN": 1163,
+      "IT": 1236,
+      "BR": 1186,
+      "CN": 1164,
       "SE": 899,
-      "IN": 892,
-      "CH": 851,
-      "ZA": 851,
+      "IN": 893,
+      "CH": 852,
+      "ZA": 852,
       "MX": 756,
       "NO": 690,
       "KR": 650,
@@ -72,6 +72,6 @@
     "market_closed_rows": 585
   },
   "seasonality": {
-    "rows": 1249
+    "rows": 1250
   }
 }
