@@ -1,12 +1,12 @@
 {
   "schema_version": "2",
-  "generated_at_utc": "2026-05-04T08:12:14.096109+00:00",
+  "generated_at_utc": "2026-05-05T07:30:40.141972+00:00",
   "sources": {
     "forexfactory": {
       "role": "primary",
       "raw_weeks": 184,
-      "events_rows": 16222,
-      "holidays_rows": 443,
+      "events_rows": 16214,
+      "holidays_rows": 439,
       "coverage_min_utc": "2022-12-26 08:00:00+00:00",
       "coverage_max_utc": "2026-07-03 12:00:00+00:00"
     },
@@ -20,45 +20,45 @@
     }
   },
   "merge": {
-    "mql5_merged_into_ff": 5392,
-    "mql5_unique_kept": 24813,
-    "final_rows": 41035,
+    "mql5_merged_into_ff": 5390,
+    "mql5_unique_kept": 24815,
+    "final_rows": 41029,
     "source_mix": {
-      "mql5": 24813,
-      "forexfactory": 16222
+      "mql5": 24815,
+      "forexfactory": 16214
     }
   },
   "events": {
-    "rows": 41035,
+    "rows": 41029,
     "coverage_min_utc": "2022-12-26 23:30:00+00:00",
     "coverage_max_utc": "2026-07-03 12:00:00+00:00",
     "impact_counts": {
-      "low": 27099,
-      "medium": 9677,
+      "low": 27097,
+      "medium": 9673,
       "high": 4259
     },
     "tier_counts": {
-      "1": 29330,
+      "1": 29324,
       "2": 6186,
       "3": 5519
     },
     "country_counts_top20": {
-      "US": 11312,
+      "US": 11313,
       "GB": 3560,
       "EU": 3450,
-      "JP": 3153,
-      "DE": 2339,
-      "AU": 1871,
+      "JP": 3151,
+      "DE": 2337,
+      "AU": 1870,
       "CA": 1744,
       "FR": 1629,
       "NZ": 1313,
       "IT": 1236,
       "BR": 1186,
-      "CN": 1164,
+      "CN": 1163,
       "SE": 899,
       "IN": 893,
-      "CH": 852,
       "ZA": 852,
+      "CH": 851,
       "MX": 756,
       "NO": 690,
       "KR": 650,
@@ -66,12 +66,12 @@
     }
   },
   "holidays": {
-    "rows": 1272,
+    "rows": 1271,
     "tier1_rows": 597,
-    "tier2_rows": 675,
+    "tier2_rows": 674,
     "market_closed_rows": 585
   },
   "seasonality": {
-    "rows": 1250
+    "rows": 1251
   }
 }
