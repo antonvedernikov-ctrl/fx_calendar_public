@@ -1,11 +1,11 @@
 {
   "schema_version": "2",
-  "generated_at_utc": "2026-05-08T06:15:12.924625+00:00",
+  "generated_at_utc": "2026-05-09T06:38:45.891801+00:00",
   "sources": {
     "forexfactory": {
       "role": "primary",
       "raw_weeks": 185,
-      "events_rows": 16299,
+      "events_rows": 16301,
       "holidays_rows": 444,
       "coverage_min_utc": "2022-12-26 08:00:00+00:00",
       "coverage_max_utc": "2026-07-12 22:30:00+00:00"
@@ -13,56 +13,56 @@
     "mql5": {
       "role": "secondary",
       "raw_weeks": 113,
-      "events_rows": 30307,
+      "events_rows": 30339,
       "holidays_rows": 495,
       "coverage_min_utc": "2022-12-31 00:00:00+00:00",
-      "coverage_max_utc": "2026-07-08 05:00:00+00:00"
+      "coverage_max_utc": "2026-07-09 06:00:00+00:00"
     }
   },
   "merge": {
-    "mql5_merged_into_ff": 5404,
-    "mql5_unique_kept": 24903,
-    "final_rows": 41202,
+    "mql5_merged_into_ff": 5415,
+    "mql5_unique_kept": 24924,
+    "final_rows": 41225,
     "source_mix": {
-      "mql5": 24903,
-      "forexfactory": 16299
+      "mql5": 24924,
+      "forexfactory": 16301
     }
   },
   "events": {
-    "rows": 41202,
+    "rows": 41225,
     "coverage_min_utc": "2022-12-26 23:30:00+00:00",
     "coverage_max_utc": "2026-07-12 22:30:00+00:00",
     "impact_counts": {
-      "low": 27244,
-      "medium": 9690,
-      "high": 4268
+      "low": 27264,
+      "medium": 9709,
+      "high": 4252
     },
     "tier_counts": {
-      "1": 29424,
-      "2": 6237,
-      "3": 5541
+      "1": 29450,
+      "2": 6235,
+      "3": 5540
     },
     "country_counts_top20": {
-      "US": 11364,
-      "GB": 3550,
-      "EU": 3453,
-      "JP": 3174,
-      "DE": 2349,
-      "AU": 1874,
+      "US": 11376,
+      "GB": 3551,
+      "EU": 3462,
+      "JP": 3178,
+      "DE": 2350,
+      "AU": 1872,
       "CA": 1755,
       "FR": 1633,
       "NZ": 1340,
-      "IT": 1242,
-      "BR": 1198,
-      "CN": 1169,
+      "IT": 1239,
+      "BR": 1189,
+      "CN": 1170,
+      "IN": 900,
       "SE": 900,
-      "IN": 894,
       "CH": 858,
       "ZA": 853,
       "MX": 759,
-      "NO": 694,
+      "NO": 696,
       "KR": 651,
-      "ES": 615
+      "ES": 616
     }
   },
   "holidays": {
@@ -72,6 +72,6 @@
     "market_closed_rows": 585
   },
   "seasonality": {
-    "rows": 1254
+    "rows": 1255
   }
 }
