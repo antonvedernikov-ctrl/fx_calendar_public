@@ -1,6 +1,6 @@
 {
   "schema_version": "2",
-  "generated_at_utc": "2026-05-10T07:41:08.016309+00:00",
+  "generated_at_utc": "2026-05-11T10:52:10.082056+00:00",
   "sources": {
     "forexfactory": {
       "role": "primary",
@@ -13,53 +13,53 @@
     "mql5": {
       "role": "secondary",
       "raw_weeks": 113,
-      "events_rows": 30405,
+      "events_rows": 30411,
       "holidays_rows": 496,
       "coverage_min_utc": "2022-12-31 00:00:00+00:00",
-      "coverage_max_utc": "2026-07-10 06:45:00+00:00"
+      "coverage_max_utc": "2026-07-10 19:30:00+00:00"
     }
   },
   "merge": {
-    "mql5_merged_into_ff": 5424,
-    "mql5_unique_kept": 24981,
-    "final_rows": 41281,
+    "mql5_merged_into_ff": 5421,
+    "mql5_unique_kept": 24990,
+    "final_rows": 41290,
     "source_mix": {
-      "mql5": 24981,
+      "mql5": 24990,
       "forexfactory": 16300
     }
   },
   "events": {
-    "rows": 41281,
+    "rows": 41290,
     "coverage_min_utc": "2022-12-26 23:30:00+00:00",
     "coverage_max_utc": "2026-07-12 22:30:00+00:00",
     "impact_counts": {
-      "low": 27299,
+      "low": 27312,
       "medium": 9712,
-      "high": 4270
+      "high": 4266
     },
     "tier_counts": {
-      "1": 29484,
-      "2": 6237,
-      "3": 5560
+      "1": 29477,
+      "2": 6243,
+      "3": 5570
     },
     "country_counts_top20": {
-      "US": 11380,
-      "GB": 3573,
-      "EU": 3459,
-      "JP": 3180,
+      "US": 11391,
+      "GB": 3552,
+      "EU": 3460,
+      "JP": 3181,
       "DE": 2351,
       "AU": 1873,
-      "CA": 1755,
+      "CA": 1759,
       "FR": 1637,
-      "NZ": 1340,
-      "IT": 1241,
-      "BR": 1198,
+      "NZ": 1341,
+      "IT": 1242,
+      "BR": 1200,
       "CN": 1173,
-      "IN": 901,
+      "IN": 904,
       "SE": 900,
-      "CH": 858,
-      "ZA": 855,
-      "MX": 762,
+      "CH": 859,
+      "ZA": 856,
+      "MX": 765,
       "NO": 701,
       "KR": 651,
       "ES": 616
@@ -72,6 +72,6 @@
     "market_closed_rows": 585
   },
   "seasonality": {
-    "rows": 1256
+    "rows": 1257
   }
 }
