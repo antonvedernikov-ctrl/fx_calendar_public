@@ -1,77 +1,77 @@
 {
   "schema_version": "2",
-  "generated_at_utc": "2026-05-13T09:35:40.730204+00:00",
+  "generated_at_utc": "2026-05-14T09:22:02.072766+00:00",
   "sources": {
     "forexfactory": {
       "role": "primary",
-      "raw_weeks": 185,
-      "events_rows": 16301,
-      "holidays_rows": 444,
+      "raw_weeks": 186,
+      "events_rows": 16384,
+      "holidays_rows": 446,
       "coverage_min_utc": "2022-12-26 08:00:00+00:00",
-      "coverage_max_utc": "2026-07-12 22:30:00+00:00"
+      "coverage_max_utc": "2026-07-19 23:01:00+00:00"
     },
     "mql5": {
       "role": "secondary",
-      "raw_weeks": 113,
-      "events_rows": 30444,
-      "holidays_rows": 498,
+      "raw_weeks": 114,
+      "events_rows": 30465,
+      "holidays_rows": 499,
       "coverage_min_utc": "2022-12-31 00:00:00+00:00",
-      "coverage_max_utc": "2026-07-12 22:30:00+00:00"
+      "coverage_max_utc": "2026-07-14 08:40:00+00:00"
     }
   },
   "merge": {
     "mql5_merged_into_ff": 5431,
-    "mql5_unique_kept": 25013,
-    "final_rows": 41314,
+    "mql5_unique_kept": 25034,
+    "final_rows": 41418,
     "source_mix": {
-      "mql5": 25013,
-      "forexfactory": 16301
+      "mql5": 25034,
+      "forexfactory": 16384
     }
   },
   "events": {
-    "rows": 41314,
+    "rows": 41418,
     "coverage_min_utc": "2022-12-26 23:30:00+00:00",
-    "coverage_max_utc": "2026-07-12 22:30:00+00:00",
+    "coverage_max_utc": "2026-07-19 23:01:00+00:00",
     "impact_counts": {
-      "low": 27329,
-      "medium": 9704,
-      "high": 4281
+      "low": 27393,
+      "medium": 9755,
+      "high": 4270
     },
     "tier_counts": {
-      "1": 29503,
-      "2": 6246,
-      "3": 5565
+      "1": 29575,
+      "2": 6261,
+      "3": 5582
     },
     "country_counts_top20": {
-      "US": 11392,
-      "GB": 3574,
-      "EU": 3458,
-      "JP": 3181,
-      "DE": 2352,
-      "AU": 1874,
-      "CA": 1759,
-      "FR": 1638,
-      "NZ": 1341,
-      "IT": 1243,
-      "BR": 1192,
-      "CN": 1176,
-      "IN": 907,
+      "US": 11422,
+      "GB": 3571,
+      "EU": 3466,
+      "JP": 3186,
+      "DE": 2365,
+      "AU": 1879,
+      "CA": 1767,
+      "FR": 1639,
+      "NZ": 1345,
+      "IT": 1242,
+      "BR": 1201,
+      "CN": 1186,
+      "IN": 915,
       "SE": 900,
-      "CH": 858,
+      "CH": 861,
       "ZA": 856,
       "MX": 765,
       "NO": 701,
       "KR": 651,
-      "ES": 617
+      "ES": 619
     }
   },
   "holidays": {
-    "rows": 1274,
-    "tier1_rows": 598,
+    "rows": 1275,
+    "tier1_rows": 599,
     "tier2_rows": 676,
-    "market_closed_rows": 586
+    "market_closed_rows": 587
   },
   "seasonality": {
-    "rows": 1259
+    "rows": 1260
   }
 }
